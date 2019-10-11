@@ -1,0 +1,22 @@
+digraph G {
+	node0 [label="Research City"];
+	node1 [label="Get Tech Coord"];
+	node2 [label="Run First Class"];
+	node3 [label="Get 5 Students"];
+	node4 [label="Get Teacher"];
+	node5 [label="Get Location"];
+	subgraph U {
+		edge [dir=none];
+	}
+	subgraph D {
+		node0 -> node5;
+		node0 -> node1;
+		node0 -> node4;
+		node0 -> node3;
+		node1 -> node2;
+		node3 -> node2;
+		node4 -> node2;
+		node5 -> node2;
+	}
+}
+
