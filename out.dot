@@ -1,22 +1,22 @@
 digraph G {
-	node0 [label="Research City"];
-	node1 [label="Get Tech Coord"];
-	node2 [label="Run First Class"];
-	node3 [label="Get 5 Students"];
-	node4 [label="Get Teacher"];
-	node5 [label="Get Location"];
+	node0 [label="(task \"Get Tech Coord\" 10 (list (task \"Research City\" 10 '())))\n"];
+	node1 [label="(task \"Get Teacher\" 10 (list (task \"Research City\" 10 '())))\n"];
+	node2 [label="(task \"Get Location\" 10 (list (task \"Research City\" 10 '())))\n"];
+	node3 [label="(task \"Research City\" 10 '())\n"];
+	node4 [label="(task \"Get 5 Students\" 10 (list (task \"Research City\" 10 '())))\n"];
+	node5 [label="(task\n \"Run First Class\"\n 60\n (list\n  (task \"Get Tech Coord\" 10 (list (task \"Research City\" 10 '())))\n  (task \"Get Teacher\" 10 (list (task \"Research City\" 10 '())))\n  (task \"Get Location\" 10 (list (task \"Research City\" 10 '())))\n  (task \"Get 5 Students\" 10 (list (task \"Research City\" 10 '())))))\n"];
 	subgraph U {
 		edge [dir=none];
 	}
 	subgraph D {
 		node0 -> node5;
-		node0 -> node1;
-		node0 -> node4;
-		node0 -> node3;
-		node1 -> node2;
+		node1 -> node5;
+		node2 -> node5;
 		node3 -> node2;
-		node4 -> node2;
-		node5 -> node2;
+		node3 -> node0;
+		node3 -> node1;
+		node3 -> node4;
+		node4 -> node5;
 	}
 }
 
