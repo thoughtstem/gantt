@@ -9,7 +9,7 @@
          dep-graph
          render-graph)
 
-(require pict graph rsvg
+(require pict graph 
          posn
          "./map-graph.rkt")
 
