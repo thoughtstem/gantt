@@ -1,6 +1,6 @@
 #lang info
 (define collection "gantt")
-(define deps '("base" "graph" "posn"))
+(define deps '("base" "graph" "jack-posn"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/gantt.scrbl" ())))
 (define pkg-desc "Description Here")
